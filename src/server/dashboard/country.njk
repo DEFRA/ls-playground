@@ -1,0 +1,64 @@
+{% extends "layouts/page.njk" %}
+
+{% from "govuk/components/table/macro.njk" import govukTable %}
+{% from "govuk/components/input/macro.njk" import govukInput %}
+{% from "govuk/components/button/macro.njk" import govukButton %}
+
+{% set pageTitle = "Movement dashboard" %}
+
+{% block content %}
+  {{ appHeading({
+    text: heading,
+    caption: ""
+  }) }}
+  <h1 class="govuk-heading-l">Livestock movements for {{levelName}}.</h1>
+
+  <p class="govuk-body">
+    Each row below shows which counties where involved in either sending or receiving  represents movements where {{levelName}} was either the source or destination of the animal.
+  </p>
+
+  <h2 class="govuk-heading-m">Summary</h2>
+
+  <p class="govuk-body">
+    Total animals moved: <strong>{{ movementData.totalIn + movementData.totalOut }}</strong><br>
+    Total movements: <strong>{{ movementData.movementCount }}</strong>
+  </p>
+
+  {% if movementData | length == 0 %}
+    <p class="govuk-body">No movements found for this filter.</p>
+  {% else %}
+    {% set rows = [] %}
+    {% for m in movementData.rows %}
+      {# Build the button HTML first #}
+      {% set actionHtml %}
+        {{ govukButton({
+          text: "View",
+          href: postBackUrl ~ "/" ~ m[0],
+          classes: "govuk-button--secondary govuk-!-margin-bottom-0"
+        }) }}
+      {% endset %}
+
+      {% set rows = rows.concat([
+        [
+          { text: m[1] },
+          { text: m[2] },
+          { text: m[3] },
+          { html: actionHtml }
+        ]
+      ]) %}
+    {% endfor %}
+
+    {{ govukTable({
+      caption: "Number of movements by county",
+      captionClasses: "govuk-table__caption--m",
+      head: [
+        { text: "County" },
+        { text: "Movements in" },
+        { text: "Movements out" },
+        { text: ""}
+      ],
+      rows: rows
+    }) }}
+  {% endif %}
+
+{% endblock %}

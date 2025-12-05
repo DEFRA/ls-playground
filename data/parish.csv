@@ -1,0 +1,233 @@
+CountyCode,Code,Name
+44,102,Boston
+44,119,Wyberton
+44,108,Kirton
+44,104,Frampton
+44,115,Sutterton
+44,101,Algarkirk
+44,117,Swineshead
+44,103,Donington
+44,106,Gosberton
+44,112,Quadring
+44,114,Surfleet
+44,111,Pinchbeck
+44,113,Spalding
+44,107,Holbeach
+44,109,Long Sutton
+44,105,Gedney
+44,110,Moulton
+44,116,Sutton Bridge
+44,118,Whaplode
+43,107,Grantham
+43,110,Sleaford
+43,102,Billingborough
+43,108,Heckington
+43,106,Folkingham
+43,103,Caythorpe
+43,101,Ancaster
+43,104,Colsterworth
+43,105,Corby Glen
+43,111,South Witham
+43,109,Osbournby
+21,102,Ashford
+21,116,Wye
+21,105,Challock
+21,106,Charing
+21,108,Lenham
+21,114,Tenterden
+21,111,Rolvenden
+21,107,Cranbrook
+21,101,Appledore
+21,115,Woodchurch
+21,110,New Romney
+21,109,Lydd
+21,104,Brookland
+21,113,Smarden
+21,103,Benenden
+21,112,Sandhurst
+18,105,East Dereham
+18,101,Beetley
+18,102,Brisley
+18,107,Great Dunham
+18,109,Little Dunham
+18,112,Swaffham
+18,103,Castle Acre
+18,110,Narborough
+18,106,Fakenham
+18,113,Walsingham
+18,108,Holkham
+18,114,Wells-next-the-Sea
+18,111,Sheringham
+18,104,Cromer
+19,102,Eye
+19,103,Hoxne
+19,105,Redgrave
+19,106,Rickinghall
+19,101,Diss (Suffolk)
+19,107,Stowmarket
+19,104,Mendlesham
+19,108,Thornham Magna
+19,109,Thornham Parva
+20,102,Chelmsford
+20,104,Great Baddow
+20,106,Maldon
+20,105,Heybridge
+20,108,Tolleshunt D'Arcy
+20,109,Tolleshunt Major
+20,103,Colchester
+20,111,Wivenhoe
+20,107,Tiptree
+20,110,Witham
+20,101,Braintree
+45,111,Yeovil
+45,105,Martock
+45,108,South Petherton
+45,104,Langport
+45,107,Somerton
+45,103,Glastonbury
+45,109,Street
+45,106,Shepton Mallet
+45,102,Frome
+45,101,Castle Cary
+45,110,Wincanton
+46,101,Cirencester
+46,102,Fairford
+46,107,Tetbury
+46,103,Minchinhampton
+46,104,Nailsworth
+46,105,North Cerney
+46,106,South Cerney
+14,104,Stratford-upon-Avon
+14,101,Bidford-on-Avon
+14,105,Walcote
+14,102,Rugby
+14,103,Stoneleigh
+14,106,Wellesbourne
+47,104,Monmouth
+47,101,Abergavenny
+47,108,Usk
+47,106,Raglan
+47,102,Caldicot
+47,103,Magor
+47,105,Portskewett
+47,107,Rogiet
+58,103,Haverfordwest
+58,101,Fishguard
+58,102,Goodwick
+58,104,Narberth
+58,105,Saundersfoot
+58,106,Tenby
+59,102,Carmarthen
+59,103,Llandeilo
+59,104,Llandovery
+59,101,Ammanford
+59,105,Whitland
+57,101,Aberystwyth
+57,102,Cardigan
+57,103,Lampeter
+57,104,Tregaron
+60,104,Kelso
+60,103,Jedburgh
+60,102,Hawick
+60,101,Ancrum
+61,102,Selkirk
+61,101,Ettrick
+61,103,Yarrow
+62,102,Peebles
+62,101,Innerleithen
+62,103,West Linton
+63,102,Duns
+63,103,Eyemouth
+63,101,Chirnside
+64,102,Haddington
+64,103,North Berwick
+64,101,Dunbar
+65,102,Dalkeith
+65,101,Bonnyrigg
+65,103,Penicuik
+66,103,Livingston
+66,101,Bathgate
+66,102,Linlithgow
+67,102,Lanark
+67,101,Hamilton
+67,104,Wishaw
+67,103,Motherwell
+68,102,Dumfries
+68,103,Lockerbie
+68,104,Moffat
+68,101,Annan
+69,103,Kirkcudbright
+69,101,Castle Douglas
+69,102,Gatehouse of Fleet
+70,103,Wigtown
+70,102,Stranraer
+70,101,Newton Stewart
+71,101,Ayr
+71,103,Kilmarnock
+71,104,Troon
+71,102,Cumnock
+72,102,Paisley
+72,103,Renfrew
+72,101,Johnstone
+73,102,Dumbarton
+73,101,Clydebank
+73,103,Helensburgh
+74,103,Oban
+74,102,Inveraray
+74,101,Campbeltown
+75,103,Stirling
+75,102,Falkirk
+75,101,Denny
+76,101,Alloa
+76,102,Clackmannan
+76,103,Tullibody
+77,102,Perth
+77,101,Blairgowrie
+77,103,Pitlochry
+78,101,Kinross
+78,102,Milnathort
+79,101,Cupar
+79,104,St Andrews
+79,103,Kirkcaldy
+79,102,Dunfermline
+80,101,Arbroath
+80,103,Forfar
+80,102,Brechin
+80,104,Montrose
+81,103,Stonehaven
+81,101,Inverbervie
+81,102,Laurencekirk
+82,103,Inverurie
+82,101,Ellon
+82,104,Turriff
+82,102,Huntly
+83,101,Banff
+83,103,Macduff
+83,102,Keith
+84,101,Elgin
+84,102,Forres
+84,103,Lossiemouth
+85,102,Nairn
+85,101,Auldearn
+86,103,Inverness
+86,102,Fort Augustus
+86,104,Kingussie
+86,101,Aviemore
+87,102,Dingwall
+87,103,Tain
+87,101,Alness
+88,103,Golspie
+88,101,Brora
+88,102,Dornoch
+89,102,Wick
+89,101,Thurso
+90,101,Kirkwall
+90,102,Stromness
+91,101,Lerwick
+91,102,Scalloway
+92,101,Rothesay
+93,102,Reay
+93,101,Halkirk
+94,102,Walls
+94,103,Yell
+94,101,Unst

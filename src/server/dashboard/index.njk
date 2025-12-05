@@ -1,0 +1,109 @@
+{% extends "layouts/page.njk" %}
+
+{% from "govuk/components/table/macro.njk" import govukTable %}
+{% from "govuk/components/input/macro.njk" import govukInput %}
+{% from "govuk/components/radios/macro.njk" import govukRadios %}
+{% from "govuk/components/button/macro.njk" import govukButton %}
+{% from "govuk/components/date-input/macro.njk" import govukDateInput %}
+
+{% set pageTitle = "Movement dashboard" %}
+
+{% block content %}
+  {{ appHeading({
+    text: heading,
+    caption: "Livestock movements"
+  }) }}
+
+  <p class="govuk-body">
+    Select a date range to filter the movements shown below.
+  </p>
+
+  <form method="get" class="govuk-!-margin-bottom-6">
+    <div class="govuk-grid-column-full">
+      <div class="govuk-grid-column-one-half">
+        {{ govukDateInput({
+          id: "filter-start-date",
+          namePrefix: "filter-start-date",
+          fieldset: {
+            legend: {
+              text: "Start Date",
+              classes: "govuk-label--s"
+            }
+          },
+          items: [
+            { name: "day", classes: "govuk-input--width-2"},
+            { name: "month", classes: "govuk-input--width-2"},
+            { name: "year", classes: "govuk-input--width-4"}
+          ]
+        }) }}
+      </div>
+      <div class="govuk-grid-column-one-half">
+      {{ govukDateInput({
+        id: "filter-end-date",
+        namePrefix: "filter-end-date",
+        fieldset: {
+          legend: {
+            text: "End Date",
+            classes: "govuk-label--s"
+          }
+        },
+        items: [
+          { name: "day", classes: "govuk-input--width-2", value: "" | today('d')  },
+          { name: "month", classes: "govuk-input--width-2", value: "" | today('m')  },
+          { name: "year", classes: "govuk-input--width-4", value: "" | today('y')  }
+        ]
+      }) }}
+      </div>
+    </div>
+    <div class="govuk-grid-column-full">
+      {{ govukButton({
+        text: "Apply filter"
+      }) }}
+    </div>
+  </form>
+
+  <h2 class="govuk-heading-m">Summary</h2>
+
+  <p class="govuk-body">
+    Total animals moved: <strong>{{ movementData.totalIn + movementData.totalOut }}</strong><br>
+    Total movements: <strong>{{ movementData.movementCount }}</strong>
+  </p>
+
+  {% if movementData | length == 0 %}
+    <p class="govuk-body">No movements found for this filter.</p>
+  {% else %}
+    {% set rows = [] %}
+    {% for m in movementData.rows %}
+      {# Build the button HTML first #}
+      {% set actionHtml %}
+        {{ govukButton({
+          text: "View",
+          href: postBackUrl ~ "/" ~ m[0],
+          classes: "govuk-button--secondary govuk-!-margin-bottom-0"
+        }) }}
+      {% endset %}
+
+      {% set rows = rows.concat([
+        [
+          { text: m[1] },
+          { text: m[2] },
+          { text: m[3] },
+          { html: actionHtml }
+        ]
+      ]) %}
+      {% endfor %}
+
+    {{ govukTable({
+      caption: "Number of movements by country",
+      captionClasses: "govuk-table__caption--m",
+      head: [
+        { text: "Country" },
+        { text: "Movements in" },
+        { text: "Movements out" },
+        { text: ""}
+      ],
+      rows: rows
+    }) }}
+  {% endif %}
+
+{% endblock %}
