@@ -58,6 +58,11 @@ describe('context and cache', () => {
               current: false,
               text: 'About',
               href: '/about'
+            },
+            {
+              current: false,
+              href: '/dashboard',
+              text: 'Dashboard'
             }
           ],
           serviceName: 'ls-playground',
@@ -147,6 +152,11 @@ describe('context and cache', () => {
               current: false,
               text: 'About',
               href: '/about'
+            },
+            {
+              current: false,
+              href: '/dashboard',
+              text: 'Dashboard'
             }
           ],
           serviceName: 'ls-playground',
